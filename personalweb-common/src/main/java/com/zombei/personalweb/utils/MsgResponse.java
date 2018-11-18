@@ -1,4 +1,4 @@
-package com.zombieboy.common;
+package com.zombei.personalweb.utils;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -14,8 +14,7 @@ public class MsgResponse {
     private Map<String, Object> extend = new HashMap<>();
 
     //成功信息
-    public static MsgResponse success()
-    {
+    public static MsgResponse success() {
         MsgResponse msg = new MsgResponse();
         msg.setCode(200);
         msg.setMsg("处理成功!");
@@ -23,8 +22,7 @@ public class MsgResponse {
     }
 
     //成功信息
-    public static MsgResponse fail()
-    {
+    public static MsgResponse fail() {
         MsgResponse msg = new MsgResponse();
         msg.setCode(400);
         msg.setMsg("处理失败!");
@@ -32,39 +30,32 @@ public class MsgResponse {
     }
 
     //添加包含的数据
-    public MsgResponse add(String key, Object value)
-    {
+    public MsgResponse add(String key, Object value) {
         this.getExtend().put(key, value);
         return this;
     }
 
-    public int getCode()
-    {
+    public int getCode() {
         return code;
     }
 
-    public void setCode(int code)
-    {
+    public void setCode(int code) {
         this.code = code;
     }
 
-    public String getMsg()
-    {
+    public String getMsg() {
         return msg;
     }
 
-    public void setMsg(String msg)
-    {
+    public void setMsg(String msg) {
         this.msg = msg;
     }
 
-    public Map<String, Object> getExtend()
-    {
+    public Map<String, Object> getExtend() {
         return extend;
     }
 
-    public void setExtend(Map<String, Object> extend)
-    {
+    public void setExtend(Map<String, Object> extend) {
         this.extend = extend;
     }
 }
